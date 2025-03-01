@@ -47,7 +47,7 @@ export const signin = (email, password, navigate) => async (dispatch) => {
 		dispatch({ type: SIGNIN_SUCCESS, payload: userCredentials.user });
 		console.log(userCredentials, "user");
         window.alert('login succcesfull')
-		// navigate("/");
+		navigate("/");
 	} catch (error) {
 		console.error("Sigin error:", error);
 	}

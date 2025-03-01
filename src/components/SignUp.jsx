@@ -12,16 +12,16 @@ export const SignUp = () => {
 
     const submit = () => {
         dispatch(signUp(email, password))
+        setEmail('');
+        setPassword('')
     }
 
     const signOutFn = () => {
         dispatch(signout())
     }
     return (
-        <div>SignUp  <button onClick={signOutFn}> sign out </button>
-        <p> login email: {state?.auth?.user?.email || ''} </p>
-            <hr />
-
+        <div>SignUp 
+             <button onClick={signOutFn}> sign out </button>
             <input type='text' placeholder='enter email' value={email} onChange={(e) => setEmail(e.target.value)} />
             <input type='password' placeholder='enter email' value={password} onChange={(e) => setPassword(e.target.value)} />
             <button onClick={submit}>SUbmit</button>
